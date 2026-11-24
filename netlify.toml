@@ -1,0 +1,13 @@
+# Netlify settings for the AI Center Programming Dashboard.
+# No build step: the dashboard is a single self-contained page (index.html).
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
